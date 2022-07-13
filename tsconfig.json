@@ -1,0 +1,15 @@
+{
+    "compilerOptions": { // コンパイルする際の出力方法の変更や記述のルールを設定
+        "sourceMap": true,
+        "target": "ES2015", // 出力されるファイルのECMAScriptのバージョン指定。モダンブラウザであればES2015以降
+        "lib": ["DOM", "ESNext"], // デフォルトで提供されている型定義を変更できる
+        "module": "ES2015", // 出力されるファイルのモジュールの方式を決定する。webpackを通す場合はES2015を指定しておくと良い
+        "esModuleInterop": true, // ライブラリのexportの方法によらず全てのimportに対して記述方法を統一してくれる：import lib from 'lib';のような感じ
+        "strict": true, // デフォルトよりも厳しい型チェック
+        "forceConsistentCasingInFileNames": true, //ファイル名の大文字と小文字を区別するかどうかの設定
+        "noFallthroughCasesInSwitch": true, // switch文が記述された場合、case句内でbreakかreturnが記述されることを強制する
+        "noImplicitReturns": true, // 関数ないの全てのコードパスにおいて値を返却していることを強制する
+        "noUnusedLocals": true, // 利用されていないローカル変数がある場合にエラーとなる
+        "noUnusedParameters": true // 利用されていないパラメーターがある場合にエラーとなる
+    }
+}
